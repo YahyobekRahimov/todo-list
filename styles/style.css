@@ -379,10 +379,46 @@ th {
   padding: 0;
 }
 
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/poppins-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/poppins-v20-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/poppins-v20-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/poppins-v20-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -390,6 +426,118 @@ th {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.input-section__container {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  gap: 30px;
+  justify-content: center;
+}
+.input-section__container img {
+  filter: invert(17%) sepia(94%) saturate(3745%) hue-rotate(241deg) brightness(78%) contrast(117%);
+}
+
+.input-submit-section {
+  font-size: 2rem;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.input-submit-section input {
+  width: 100%;
+  padding: 4px;
+  border: 1px solid rgb(128, 128, 253);
+  border-radius: 6px;
+}
+.input-submit-section button {
+  background-color: white;
+  border: 3px solid #2323d2;
+  border-radius: 5px;
+  padding: 5px 14px;
+  transition: all 0.2s ease-in;
+  background-color: rgb(229, 229, 255);
+}
+.input-submit-section button:hover {
+  color: white;
+  background-color: rgb(35, 35, 210);
+}
+
+.todo-list__container {
+  margin-top: 30px;
+}
+
+.todo-list-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.todo-list-nav li {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 5% 85% 5%;
+  align-items: center;
+  font-size: 2.5rem;
+  gap: 10px;
+  border: 4px solid #E6DB74;
+  border-radius: 10px;
+  background-color: #f7f1b3;
+  padding: 20px;
+}
+.todo-list-nav li input[type=checkbox] {
+  appearance: none;
+  position: relative;
+  width: 35px;
+}
+.todo-list-nav li input[type=checkbox]::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: rgb(224, 222, 222);
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  border-radius: 3px;
+}
+.todo-list-nav li input[type=checkbox]::before {
+  content: "";
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  z-index: 1;
+  border-color: #000;
+  border-style: solid;
+  position: absolute;
+  width: 17px;
+  height: 37px;
+  transform: rotate(45deg);
+  bottom: -8px;
+  left: 5px;
+  display: none;
+}
+.todo-list-nav li input[type=checkbox]:hover::after {
+  background-color: rgb(201, 200, 200);
+}
+.todo-list-nav li input[type=checkbox]:checked::before {
+  display: block;
+}
+
+.remove-button {
+  background-color: red;
+  border: none;
+  padding: 5px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.remove-button:hover {
+  background-color: rgb(187, 16, 16);
+}
+.remove-button img {
+  width: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

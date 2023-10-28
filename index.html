@@ -5,40 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="./images/checklist.png" type="image/x-icon">
+    <title>To-do list</title>
 </head>
 
 <body>
 
-    <!-- Header section -->
-
-    <header class="header">
-        <div class="container header__container">
-
-        </div>
-    </header>
-
-    <!-- Main -->
-
-    <main>
-        <section class="">
-            <div class="container">
-
+    <main class="main">
+        <!-- input section -->
+        <section class="input-section">
+            <div class="container input-section__container">
+                <img height="80" src="./images/notebook-pen-icon.svg" alt="notes">
+                <div class="input-submit-section">
+                    <input placeholder="Ishni kiriting..." type="text" id="comment">
+                    <button id="submit-btn">Kiritish</button>
+                </div>
             </div>
         </section>
-
-        <section class="">
-            <div class="container">
-
+        <!-- Todo list section -->
+        <section class="to-do-list">
+            <div class="container todo-list__container">
+                <ul class="todo-list-nav">
+                </ul>
             </div>
         </section>
     </main>
-
-    <footer>
-        <div class="container footer__container">
-
-        </div>
-    </footer>
+    
 </body>
+<script src="./JS/index.js"></script>
 
 </html>
